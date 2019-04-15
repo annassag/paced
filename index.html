@@ -19,8 +19,8 @@
                 document.body.style.opacity = 0.5;
                 document.getElementById("player").playbackRate = 0.5;
                 clearInterval(interval);
-                var random = Math.floor(Math.random() * $('.flip-card').length);
-                $('.flip-card').hide().eq(random).show();
+                
+                
 
 
             });
@@ -32,6 +32,9 @@
                 animate();
                 clearInterval(interval);   
                 interval = setInterval(animate,500); 
+                var random = Math.floor(Math.random() * $('.flip-card').length);
+                $('.flip-card').hide().eq(random).show();
+
             
 
 
