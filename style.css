@@ -1,0 +1,119 @@
+
+audio   {
+    display: none;
+}
+
+img {
+    height: 200px;
+}
+
+
+.flip-card {
+  width: 24.8%;
+  height: 1000px;
+  perspective: 1000px;
+  display: inline-flex;
+  padding-top: 100px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+font-family: 'Helvetica', sans-serif;}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  font-family: 'Helvetica', sans-serif;
+  padding-left: 20px;
+}
+
+.flip-card-front p {
+  color: black;
+  font-family: 'Cinzel', serif;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.flip-card-back p {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.box {
+    width: 350px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+}
+
+
+.box2 {
+    display: inline-flex;
+}
+
+.box3 {
+    display: inline-flex;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+}
+
+
+
+.slottt-machine-recipe {
+    width: 500px;
+    padding-left: 0%;
+}
+
+
+.slottt-machine-recipe__mask {
+    width: 600px;
+    height: 100px;
+    overflow: hidden; 
+    position: absolute;
+    display: inline-flex;
+    margin: auto;
+}
+
+.slottt-machine-recipe__items_container {
+    position: absolute;
+ 
+}
+
+.slottt-machine-recipe__item {
+    min-height: 150px;
+    max-height: 150px;
+    margin: 0px;
+    padding: 0px;
+    background-size: contain;
+
+}
+
+.recipe_if, .recipe_then {
+    font-weight: bold;
+    font-size: 80px;
+    font-family: 'Helvetica'; sans-serif;
+    color: #ad7300; 
+}
+

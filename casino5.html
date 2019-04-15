@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casino</title>
+<style type="text/css">
+
+img {
+  width: 500px;
+  margin-top: 43px;
+  margin-left: 43px;
+}
+
+.fixed {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.spin {
+    animation-name:            rotate; 
+    animation-duration:        20s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+}
+
+.spin > img {
+  width: 600px;
+  margin: 0px;
+}
+
+.spin:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to { 
+    transform: rotate(360deg);
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="box">
+<div class="fixed"><img src="spin5.png"></div><div class="spin"><img src="spin3.png"></div></div>
+</body>
+</html>
