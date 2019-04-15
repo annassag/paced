@@ -32,14 +32,12 @@
                 animate();
                 clearInterval(interval);   
                 interval = setInterval(animate,500); 
-               var $divs = $('.flip-card');
-for(var j, x, i = $divs.length; i; j = parseInt(Math.random() * i), x = $divs[--i], $divs[i] = $divs[j], $divs[j] = x);
-$('body').append($divs);
-
-            
-
+                var $divs = $('.flip-card');
+                for(var j, x, i = $divs.length; i; j = parseInt(Math.random() * i), x = $divs[--i], $divs[i] = $divs[j], $divs[j] = x);
+                $('body').append($divs);
 
             });
+
 
             setInterval(function(){
                 var info = ifvisible.getIdleInfo();
@@ -225,6 +223,6 @@ $('body').append($divs);
     
 
     <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-    <audio id="player" autoplay controls><source src="caesar.mp3" type="audio/mp"></audio></div>
+    <audio id="player" autoplay controls><source src="caesar.mp3" type="audio/mp3"></audio></div>
 </body>
 </html>
