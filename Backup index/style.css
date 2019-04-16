@@ -3,17 +3,14 @@ audio   {
     display: none;
 }
 
-body {
 
-}
 
 .flip-card {
-  width: 23%;
+  width: 24.8%;
   height: 1000px;
   perspective: 1000px;
   display: inline-flex;
   padding-top: 100px;
-  padding-left: 25px;
 }
 
 .flip-card-inner {
@@ -83,18 +80,17 @@ font-family: 'Helvetica', sans-serif;}
 
 .slottt-machine-recipe {
     width: 500px;
-    margin: auto;
+    padding-left: 0%;
 }
 
 
 .slottt-machine-recipe__mask {
-    width: 700px;
+    width: 600px;
     height: 100px;
     overflow: hidden; 
     position: absolute;
     display: inline-flex;
     margin: auto;
-    padding-top: 50px;
 }
 
 .slottt-machine-recipe__items_container {
@@ -113,12 +109,8 @@ font-family: 'Helvetica', sans-serif;}
 
 .recipe_if, .recipe_then {
     font-weight: bold;
-    font-size: 100px;
-    font-family: 'Anton', sans-serif;
-    color: #0000ff;
-    text-align: center;
-    /*font-family: 'Helvetica'; sans-serif;
+    font-size: 80px;
+    font-family: 'Helvetica'; sans-serif;
     /* color: #ad7300; 
-
 }
 
