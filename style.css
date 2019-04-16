@@ -7,9 +7,20 @@ body {
 
 }
 
+@font-face {
+      font-family: 'Neon';
+      src: url('plaid-s-mono.eot');
+      src: url('plaid-s-mono.eot?#iefix') format('embedded-opentype'),
+      url('neon.woff2') format('woff2'),
+      url('plaid-s-mono.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+
+    }
+
 .flip-card {
   width: 23%;
-  height: 1000px;
+  height: 700px;
   perspective: 1000px;
   display: inline-flex;
   padding-top: 100px;
@@ -35,21 +46,10 @@ body {
   backface-visibility: hidden;
 }
 
-.flip-card-front {
-  color: black;
-font-family: 'Helvetica', sans-serif;}
-
 .flip-card-back {
   transform: rotateY(180deg);
   font-family: 'Helvetica', sans-serif;
   padding-left: 20px;
-}
-
-.flip-card-front p {
-  color: black;
-  font-family: 'Cinzel', serif;
-  padding: 10px;
-  font-size: 12px;
 }
 
 .flip-card-back p {
@@ -79,6 +79,9 @@ font-family: 'Helvetica', sans-serif;}
     margin-left: 150px;
 }
 
+.mobile {
+  display: none;
+}
 
 
 .slottt-machine-recipe {
@@ -99,7 +102,6 @@ font-family: 'Helvetica', sans-serif;}
 
 .slottt-machine-recipe__items_container {
     position: absolute;
- 
 }
 
 .slottt-machine-recipe__item {
@@ -108,17 +110,69 @@ font-family: 'Helvetica', sans-serif;}
     margin: 0px;
     padding: 0px;
     background-size: contain;
-
 }
 
 .recipe_if, .recipe_then {
     font-weight: bold;
     font-size: 100px;
-    font-family: 'Anton', sans-serif;
+    font-family: /*'Neon',*/ 'Anton', sans-serif;
     color: #0000ff;
     text-align: center;
     /*font-family: 'Helvetica'; sans-serif;
-    /* color: #ad7300; 
-
+    /* color: #ad7300;*/
 }
+
+ @media screen and (max-width: 800px) { 
+    .flip-card {
+      float: left;
+      margin:0;
+      width: 45%;
+    }
+  }
+
+
+   @media screen and (max-width: 400px) { 
+    .flip-card {
+      float: none;
+      margin:0;
+      width: 100%;
+      height: 350px;
+
+    }
+    
+    .flip-card-back p {
+    display: none;
+    }
+
+    .mobile {
+    display: inline-block;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 20px;
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+
+    }
+
+    .box {
+      display: none;
+    }
+
+    .recipe_if, .recipe_then {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 80px;
+    font-family: /*'Neon',*/ 'Anton', sans-serif;
+    color: #0000ff;
+    text-align: center;
+    padding-left: 20px;
+    /*font-family: 'Helvetica'; sans-serif;
+    /* color: #ad7300;*/
+}
+  }
+
+
+
+
+
 
