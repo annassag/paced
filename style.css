@@ -158,6 +158,10 @@ body {
       display: none;
     }
 
+    .box3 {
+      display: none;
+    }
+
     .recipe_if, .recipe_then {
     display: inline-block;
     font-weight: bold;
