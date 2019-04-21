@@ -15,7 +15,7 @@
             }
 
             
-            ifvisible.setIdleDuration(4);
+            ifvisible.setIdleDuration(200);
 
             ifvisible.idle(function(){
                 d("result2").innerHTML = "WAKE UP";
@@ -207,9 +207,15 @@ function refreshPage(){
     </head>
     <body>
           <div class="mobile">Scroll to keep site alive<br>Visit desktop to play</div>
-          <div class="clear"><div class="box2"><div class="box">
+          <div><div class="box2"><div class="box">
           <div id="result2">Move mouse to keep site alive</div>
-          <span class="label label-warning" id="seconds">00</span> Seconds to Closing</div>
+          <span class="label label-warning" id="seconds">00</span> Seconds to Closing</div></div>
+          <div class="box3">
+          <div id="infoButton" class="navButton navImportant">Credits</div>
+          <div id="infoSlider" class="slider" style="display: none;">
+          <p>Music by Dj Caesar. Monumental Neon typeface by Robin Mientjes. With text from <i>Digital Gambling: The Coincidence of Desire and Design</i> by Natasha Dow Schull and <i>Slouching Towards Bethlehem: Four Meditations on the Old and New Spirits of Capitalism</i> by David Weldzius. Developed by Anna Sagström for Interactive Design, Yale School of Art 2019.<br><br>
+          "Moments are the elements of profit" – Karl Marx
+          </p></div></div>
           <div class="box5"><div class="slottt-machine-recipe">
           <div class="slottt-machine-recipe__mask" id="wordbox">
           <div class="slottt-machine-recipe__items_container recipe_if">
@@ -217,12 +223,7 @@ function refreshPage(){
           </div>
           </div>
           </div>
-          <div class="box3">
-          <div id="infoButton" class="navButton navImportant">Credits</div>
-          <div id="infoSlider" class="slider" style="display: none;">
-          <p>Music by Dj Caesar. Monumental Neon typeface by Robin Mientjes. With text from <i>Digital Gambling: The Coincidence of Desire and Design</i> by Natasha Dow Schull and <i>Slouching Towards Bethlehem: Four Meditations on the Old and New Spirits of Capitalism</i> by David Weldzius. Developed by Anna Sagström for Interactive Design, Yale School of Art 2019.<br><br>
-          "Moments are the elements of profit" – Karl Marx
-          </p></div>
+          
           </div>
           </div>
           </div>
