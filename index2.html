@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="HandheldFriendly" content="true" />
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+        <title>PACED</title>
+        <script src="ifvisible.js"></script>
+        <script type="text/javascript">
+
+            function d(el){
+                return document.getElementById(el);
+            }
+
+            
+            ifvisible.setIdleDuration(4);
+
+            ifvisible.idle(function(){
+                d("result2").innerHTML = "WAKE UP";
+                document.body.style.opacity = 0;
+                document.getElementById("player").playbackRate = 0.2;
+                clearInterval(interval);
+
+            });
+
+            ifvisible.wakeup(function(){
+                d("result2").innerHTML = "Move Mouse to Keep Site Alive";
+                document.body.style.opacity = 1;
+                document.getElementById("player").playbackRate = 1.5;
+                animate();
+                clearInterval(interval);   
+                interval = setInterval(animate,1000); 
+                var $divs = $('.flip-card');
+                for(var j, x, i = $divs.length; i; j = parseInt(Math.random() * i), x = $divs[--i], $divs[i] = $divs[j], $divs[j] = x);
+                $('body').append($divs);
+              document.querySelectorAll('.flip-card-back').forEach(function(element) { element.innerText = textList[Math.floor(Math.random() * textList.length)]
+                var random = Math.floor(Math.random() * $('.flip-card').length); $('.flip').hide().eq(random).show();
+       
+              })
+                
+
+              });
+
+
+              setInterval(function(){
+                var info = ifvisible.getIdleInfo();
+                // Give 3% margin to stabilaze user output
+                if(info.timeLeftPer < 3){
+                info.timeLeftPer = 0;
+                    info.timeLeft = ifvisible.getIdleDuration();
+                }
+                d("seconds").innerHTML = parseInt(info.timeLeft / 1000), 10;
+                
+                }, 100);
+
+
+
+        </script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+        <script>
+
+            // IFTTT Slottt Machine by Jen Hamon
+            // jen@ifttt.com
+            // github.com/jhamon
+
+            var wordlist = [
+              'moments',
+              'are',
+              'the',
+              'elements',
+              'of',
+              'profit',
+              'moments',
+              'are',
+              'the',
+              'elements',
+              'of',
+              'profit',
+              'moments',
+              'are',
+              'the',
+              'elements',
+              'of',
+              'profit',
+              'moments',
+              'are',
+              'the',
+              'elements',
+              'of',
+              'profit',
+            ]
+
+            var textList = [
+              '"Technology provides managers unprecedented means for orchestrating resources, due to emerging capabilities in communications, connectivity, and interoperability." – Leslie Cummings',
+
+              '“While the term productivity often refers to measures such as output per worker..., gaming productivity refers to wagering action (play) per patron per interval. Expediting refers to advancing and facilitating gaming action so that players can be more productive because their play is faster, extends for a longer interval, and/or involves more dollars placed at risk (wagered) per period than otherwise would be expected. Technology used well accelerates the constant cycling of player action toward large numbers of wagers in order to place the gaming operation at the greatest win advantage relative to players.” – Leslie Cummings',
+
+              'Time is a critical site of technological intervention: pruning dead time or unproductive motions from various phases of play is a particular focus for getting more play into each time interval.',
+
+                'A key instance of "productivity enhancement" by game developers is the switch from pull-handle to push-button machines, allowing for rapid play. You can rest your hand on the button, you do not ever have to move your hand. The effective difference in expediting play is dramatic.',
+
+                'Averaging play at a rate of five games per minute pulling a handle would result in 300 games an hour. If instead the player uses the push-button, the number of games can double this rate of play, from 300 to 600 games each hour." In fact, experienced gamblers play up to 900 hands an hour. The newest of machines feature touch screens that further reduce the time it takes to play.',
+
+                'The design tactics of game developers suggest that digital gambling technologies continue to exemplify the aims of modern discipline; the zone, no matter how "free-floating," remains in continuous relation with the material artifact of the gambling machine and its instrumental program of value extraction. Digital gambling machines, like their predecessors (and, indeed, like much of the technology at work in capitalist economies), aim to harness space and time to financially generative ends. In this sense, they are contemporary vehicles for the principle of general equivalence–the exchange ability or convertibility across time, body, labor, money, and commodities. Technologies of the "digital age" are distinct not because they depart from this principle but because they radicalize it, accelerating the convertibility of time, body, labor, and money in the interest of profit, until all those categories vanish, as in AutoPlay.',
+
+              'The objective to accelerate gaming productivity moves in tandem with an objective to maximize what gaming industry representatives call "time on device." The aim is not only to speed up play but to extend its duration.',
+
+              'Strategies to mute incoming signals and thereby prolong play are coupled with strategies to multiply the channels by which players can output signals of their desires. Computerized menus allow players to key orders into a pad of coded choices, directly transmitting specific wants (for nickels, quarters, dollar chips, a gin and tonic, alka seltzer.',
+
+              'In recent years, game developers have further reinforced the learning schedule of games by adding numerous payout lines, along with options to bet a vast number of coins to take the greatest advantage of winning combinations. Playing one hand on these machines is equivalent to playing multiple machines simultaneously.',
+
+              'A score of visual and auditory design elements–crisp, high-resolution graphics and enhanced animation as well as "hi-fi" sound–compose a "second-order conditioning" that adds to the reinforcement of play. Audio engineers work to simulate the sound of cascading coins: "We basically mixed several recordings of quarters falling on a metal tray and then fattened up the sound with the sound of falling dollars". International Gaming Technology (IGT) encodes each of its games with an average of four hundred unique "sound events" to accompany different outcomes; these sounds are not meant to be noticed but to serve as an encouraging background accompaniment to play. The idea is to create a sense of winning by pulsing all the human senses with sounds and ani mated symbols and paylines flashing, nonaversive visual and auditory cues.',
+
+              'Digitization enables engineers to mathematically adjust game payout tables or reward schedules to select for specific player profiles within a diverse market. Through the delicate demographic operation of "matching math with markets, player types with schedule types," it becomes possible to solicit "distinct audiences of risk-takers": lower-denomination players seeking frequent small wins respond to certain pay schedules; higher-denomination players seeking big wins respond to others.',
+
+                'For the gaming industry, gambling machines function not only as individual play boxes but as "electronic surveillance devices” whose internal monitors track game preferences, wins and losses, number of coins played per game, number of games played per minute, number of minutes or hours of play, number of visits to the casino, number of drinks consumed, and more. Individual machines perform these recording functions within a larger network of units controlled by a central computer. Originally engineered to track player behavior inside just one casino, digital tracking technologies embedded in games now track behavior across diverse consumer spaces by linking machines in taverns, supermarkets, pharmacies, and convenience stores. Not only the casino but the "local community" is turned into a laboratory for the collection of "live data.”',
+
+                'Interaction with the digitally enhanced features of new game platforms renders a more continuous playing experience than do "live games" or older-model slot machines, efficiently sustaining a dissociated subjective state that gamblers call the "zone," in which conventional spatial, bodily, monetary, and temporal parameters are suspended. The zone depends on a set of interlinked phenomenal elements, each of which correlates with the digital properties of gambling machines presented above: being alone, not being interrupted, speed, choice, tempo. Speed, to a greater degree than aloneness and noninterruption, is a condition of the zone over which gamblers feel a sense of control.',
+
+                'In the economy of the zone, money loses its charge as a material means of acquisition and exchange and is converted into the currency of play, a supraeconomic means of suspension from conventional circuits of exchange: "You are not playing for money; you are playing for credit. Credit so you can sit there longer, which is the goal. It is not about winning; it is about continuing to play. Bill acceptors free players from conscious awareness of money and allow them to enter into a space of credit in which money, as such, disappears.',
+
+                'Exits from the constraints of body and money are inextricably linked to an exit from time. It condenses, expands, and stretches according to an idiosyncratic course of play. Digital game features like the "dynamic play rate" promote a sense of release from the measured pace of Chronometric time. Time, like money, becomes a manipulable playing currency rather than a determinative order.',
+
+                'After the body folds into the machine and the machine folds into the game, what is left is the abstract, digital procedure of the game itself. In AutoPlay there is no feedback, no vision of the output, no perception; AutoPlay marks the point at which the varied, complex forms of interactivity and productivity that have become the trademark of the "digital age" loop into recursive forms of disengagement. Players cease to be desiring subjects betting against to win; instead, they coincide with the digital procedure and the statistical program it implements, such that they themselves come to occupy the position of the "really new god."',
+
+                'The acceleration or intensification of the digital game across bodily, temporal, and monetary registers maybe the logical extension of a modern technological ethos but at the same time marks a qualitative shift in social and existential experience. Strategies of modern discipline such as fragmentation, regimentation, and discontinuity are not abandoned; instead they are sped up to a point where they function on a register of interactivity, adaptability, choice, modulation, flow, and continuity; shock is absorbed. Levers, pulleys, clocks, and cameras are integrated with a computerized substrate of ever more complex configuration, promising players the perpetuum mobile of the zone and ensuring "continuous productivity.”',
+
+            ]
+
+            function buildSlotItem (text) {
+                return $('<div>').addClass('slottt-machine-recipe__item')
+                                 .text(text)
+            }
+
+            function buildSlotContents ($container, wordlist) {
+              $items = wordlist.map(buildSlotItem);
+              $container.append($items);
+            }
+
+              // hook start button
+              $('.go').on('click',function(){
+                var timer = 2;
+                spin(timer);
+              })
+
+            function popPushNItems ($container, n) {
+                $children = $container.find('.slottt-machine-recipe__item');
+                $children.slice(0, n).insertAfter($children.last());
+
+                if (n === $children.length) {
+                  popPushNItems($container, 1);
+                }
+            }
+
+            // After the slide animation is complete, we want to pop some items off
+            // the front of the container and push them onto the end. This is
+            // so the animation can slide upward infinitely without adding
+            // inifinte div elements inside the container.
+            function rotateContents ($container, n) {
+                setTimeout(function () {
+                  popPushNItems($container, n);
+                  $container.css({top: 0});
+                }, 300);    
+            }
+
+            function randomSlotttIndex(max) {
+              var randIndex = (Math.random() * max | 0);
+              return (randIndex > 10) ? randIndex : randomSlotttIndex(max);
+            }
+
+              
+              
+            function animate() {
+              var wordIndex = randomSlotttIndex(wordlist.length);
+              $wordbox.animate({top: -wordIndex*150}, 500, 'swing', function () {
+                rotateContents($wordbox, wordIndex);
+              });
+            }
+
+            $(function () {
+              $wordbox = $('#wordbox .slottt-machine-recipe__items_container');
+              buildSlotContents($wordbox, wordlist);  
+              buildSlotContents($wordbox, wordlist);  
+              buildSlotContents($wordbox, wordlist);  
+              buildSlotContents($wordbox, wordlist);
+              animate(); 
+              interval = setInterval(animate,2000);
+            }); 
+
+            var interval; 
+
+    
+          $(document).on("click", "#infoButton", function() {
+          $("#infoSlider").slideToggle()
+          }), $(document).on("click", ".slider", function() {
+          $(this).slideUp()
+          })
+
+          </script>
+<script>
+function refreshPage(){
+    window.location.reload();
+} 
+</script>
+    </head>
+    <body>
+          <div class="mobile">Scroll to keep site alive<br>Visit desktop to play</div>
+          <div class="clear"><div class="box2"><div class="box">
+          <div id="result2">Move mouse to keep site alive</div>
+          <span class="label label-warning" id="seconds">00</span> Seconds to Closing</div>
+          <div class="box5"><div class="slottt-machine-recipe">
+          <div class="slottt-machine-recipe__mask" id="wordbox">
+          <div class="slottt-machine-recipe__items_container recipe_if">
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="box3">
+          <div id="infoButton" class="navButton navImportant">Credits</div>
+          <div id="infoSlider" class="slider" style="display: none;">
+          <p>Music by Dj Caesar. Monumental Neon typeface by Robin Mientjes. With text from <i>Digital Gambling: The Coincidence of Desire and Design</i> by Natasha Dow Schull and <i>Slouching Towards Bethlehem: Four Meditations on the Old and New Spirits of Capitalism</i> by David Weldzius. Developed by Anna Sagström for Interactive Design, Yale School of Art 2019.<br><br>
+          "Moments are the elements of profit" – Karl Marx
+          </p></div>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div><div class="box4"><a href="index.html">Out</a>
+          <button type="button" class="button" onClick="refreshPage()">Restart</button></div>
+          
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="card2b.gif" style="width:300px;height:440px;">
+    </div>
+    <div class="flip-card-back">
+      Gambling appears to invert the nineteenth-century worker’s relationship to time, particularly its slow, monotonous passage, which was once principal to the worker’s estrangement from industrial production. In contrast to that outmoded principle, the gambler does not need to be managed or compelled to work more efficiently. She is at once an entrepreneur, a contractor, and a free agent. No need to punch in, the gambler is identified by facial recognition software embedded in state-of-the-art surveillance software, the sensors that read her MasterCard chip, or both. Her labor is not burdened by salary requirements, benefits, or any other contractual obligations. A ceaseless servant, she will never demand more than she is given. She will not organize, picket, or strike. The narratives that play through the gambler’s head as she is engaged in endless rounds of blackjack, poker, and baccarat are wholly incompatible with the tenets of dialectical materialism, even as, like the nineteenth-century worker, she is scarcely a beneficiary of her own labor. In truth, for this arrangement to endure, the gambler must convince herself that she has a standing chance (at last!) to partake in the surplus that she herself produces. There is nothing cruel or misguided about this arrangement because, after all, what other activities under the new system of labor and capital present an opportunity, albeit quantifiably narrow, to transcend one’s socioeconomic class?
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="card3b.gif" style="width:300px;height:440px;">
+    </div>
+    <div class="flip-card-back">
+     Karl Marx wrote that a capitalist mode of production turns the "laborer into a fragment of a man, degrades him to the level of a machine." Digital capabilities take these fragmenting tendencies a step further: the machine player (who is, arguably, a contemporary proxy for the factory laborer) is not merely socially isolated and made into a fragment of a man but is removed from the palpable dimensions of his own body.
+    </div>
+  </div>
+</div>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="card4b.gif" style="width:300px;height:440px;">
+    </div>
+    <div class="flip-card-back">
+      Walter Benjamin has argued that "the countless movements of switching, inserting, pressing" that punctuate modern life and its technologies (intimately connected as they are with the autonomization and standard timing of industrial labor) alter the structure of human experience. "Thus technology has subjected the human sensorium to a complex kind of training," he wrote of traffic signals. In modernity, "the shock experience has become the norm". Perhaps today we have moved from shock to the zone, a state of absorption characterized by flow and continuity. The zone exemplifies traits of "postmodernity" as a number of cultural critics have outlined them: The zone is characterized by play rather than purpose, chance rather than design, absence and immersion rather than presence and perspective, the collapse of time and space (or "time-space compression"), the "waning of affect," the free-floating circulation of credit in market exchange.
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="card5b.gif" style="width:300px;height:440px;">
+    </div>
+    <div class="flip-card-back">
+      "It is a question of extracting, from time, ever more available moments and, from each moment, ever more useful forces." <br>– Michael Foucault
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="mobile2">Gambling appears to invert the nineteenth-century worker’s relationship to time, particularly its slow, monotonous passage, which was once principal to the worker’s estrangement from industrial production. In contrast to that outmoded principle, the gambler does not need to be managed or compelled to work more efficiently. She is at once an entrepreneur, a contractor, and a free agent. No need to punch in, the gambler is identified by facial recognition software embedded in state-of-the-art surveillance software, the sensors that read her MasterCard chip, or both. Her labor is not burdened by salary requirements, benefits, or any other contractual obligations. A ceaseless servant, she will never demand more than she is given. She will not organize, picket, or strike. The narratives that play through the gambler’s head as she is engaged in endless rounds of blackjack, poker, and baccarat are wholly incompatible with the tenets of dialectical materialism, even as, like the nineteenth-century worker, she is scarcely a beneficiary of her own labor. In truth, for this arrangement to endure, the gambler must convince herself that she has a standing chance (at last!) to partake in the surplus that she herself produces. There is nothing cruel or misguided about this arrangement because, after all, what other activities under the new system of labor and capital present an opportunity, albeit quantifiably narrow, to transcend one’s socioeconomic class? <br><br>
+<i>–Slouching Towards Bethlehem: Four Meditations on the Old and New Spirits of Capitalism</i> by David Weldzius.
+<br>
+<br>
+The acceleration or intensification of the digital game across bodily, temporal, and monetary registers maybe the logical extension of a modern technological ethos but at the same time marks a qualitative shift in social and existential experience. Strategies of modern discipline such as fragmentation, regimentation, and discontinuity are not abandoned; instead they are sped up to a point where they function on a register of interactivity, adaptability, choice, modulation, flow, and continuity; shock is absorbed. Levers, pulleys, clocks, and cameras are integrated with a computerized substrate of ever more complex configuration, promising players the perpetuum mobile of the zone and ensuring "continuous productivity.”
+<br><br>
+<i>–Digital Gambling: The Coincidence of Desire and Design</i> by Natasha Dow Schull
+</div>
+</body>
+
+    
+
+    <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <audio id="player" autoplay controls loop><source src="caesar.mp3" type="audio/mp3"></audio></div>
+</body>
+</html>
