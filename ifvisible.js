@@ -162,7 +162,7 @@
       addEvent(doc, "keyup", wakeUp);
       addEvent(window, "scroll", wakeUp);
       ifvisible.focus(wakeUp);
-      return ifvisible.wakeup(wakeUp);
+      
     };
     init = function() {
       var blur;

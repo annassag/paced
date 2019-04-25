@@ -15,33 +15,49 @@
             }
 
             
-            ifvisible.setIdleDuration(4);
+ifvisible.setIdleDuration(4);
 
-            ifvisible.idle(function(){
-                d("result2").innerHTML = "WAKE UP";
-                document.body.style.opacity = 0;
-                document.getElementById("player").playbackRate = 0.2;
-                clearInterval(interval);
+var isSleeping = true;
 
-            });
+ifvisible.idle(function() {
+    d("result2").innerHTML = "WAKE UP";
+    document.body.style.opacity = 0;
+    document.getElementById("player").playbackRate = 0.2;
+    clearInterval(interval);
+    isSleeping = true;
+});
 
-            ifvisible.wakeup(function(){
-                d("result2").innerHTML = "Move Mouse to Keep Site Alive";
-                document.body.style.opacity = 1;
-                document.getElementById("player").playbackRate = 1.5;
-                animate();
-                clearInterval(interval);   
-                interval = setInterval(animate,1000); 
-                var $divs = $('.flip-card');
-                for(var j, x, i = $divs.length; i; j = parseInt(Math.random() * i), x = $divs[--i], $divs[i] = $divs[j], $divs[j] = x);
-                $('body').append($divs);
-              document.querySelectorAll('.flip-card-back').forEach(function(element) { element.innerText = textList[Math.floor(Math.random() * textList.length)]
-                var random = Math.floor(Math.random() * $('.flip-card').length); $('.flip').hide().eq(random).show();
-       
-              })
-                
 
-              });
+ifvisible.wakeup(function() {
+    
+   
+    
+  
+    
+    console.log("hej im here");
+    
+  
+    d("result2").innerHTML = "Move Mouse to Keep Site Alive";
+    document.body.style.opacity = 1;
+    document.getElementById("player").playbackRate = 1.5;
+    animate();
+    clearInterval(interval);
+    interval = setInterval(animate, 1000);
+    var $divs = $('.flip-card');
+    for (var j, x, i = $divs.length; i; j = parseInt(Math.random() * i),
+        x = $divs[--i],
+        $divs[i] = $divs[j],
+        $divs[j] = x)
+    ;
+    $('body').append($divs);
+    document.querySelectorAll('.flip-card-back').forEach(function(element) {
+        element.innerText = textList[Math.floor(Math.random() * textList.length)]
+        var random = Math.floor(Math.random() * $('.flip-card').length);
+        $('.flip').hide().eq(random).show();
+
+    })
+
+});
 
 
               setInterval(function(){
@@ -200,15 +216,17 @@
 
           </script>
 <script>
-function refreshPage(){
-    window.location.reload();
+function Shuffle(){
+    ifvisible.wakeup();
+
+
 } 
 </script>
     </head>
     <body>
           <div class="mobile">Scroll to keep site alive<br>Visit desktop to play</div>
           <div><div class="box2"><div class="box">
-          <div id="result2">Move mouse to keep site alive</div>
+          <div id="result2">Move Mouse to Keep Site Alive</div>
           <span class="label label-warning" id="seconds">00</span> Seconds to Closing</div></div>
           <div class="box3">
           <div id="infoButton" class="navButton navImportant">Credits</div>
@@ -229,12 +247,12 @@ function refreshPage(){
           </div>
           </div>
           <div><div class="box4"><a href="index.html">Out</a>
-          <button type="button" class="button" onClick="refreshPage()">Restart</button></div>
+          <button type="button" class="button" onClick="Shuffle()">Shuffle Cards</button></div>
           
   <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="card2b.gif" style="width:300px;height:440px;">
+      <img src="card2b.gif" style="width:320px;height:460px;">
     </div>
     <div class="flip-card-back">
       Gambling appears to invert the nineteenth-century worker’s relationship to time, particularly its slow, monotonous passage, which was once principal to the worker’s estrangement from industrial production. In contrast to that outmoded principle, the gambler does not need to be managed or compelled to work more efficiently. She is at once an entrepreneur, a contractor, and a free agent. No need to punch in, the gambler is identified by facial recognition software embedded in state-of-the-art surveillance software, the sensors that read her MasterCard chip, or both. Her labor is not burdened by salary requirements, benefits, or any other contractual obligations. A ceaseless servant, she will never demand more than she is given. She will not organize, picket, or strike. The narratives that play through the gambler’s head as she is engaged in endless rounds of blackjack, poker, and baccarat are wholly incompatible with the tenets of dialectical materialism, even as, like the nineteenth-century worker, she is scarcely a beneficiary of her own labor. In truth, for this arrangement to endure, the gambler must convince herself that she has a standing chance (at last!) to partake in the surplus that she herself produces. There is nothing cruel or misguided about this arrangement because, after all, what other activities under the new system of labor and capital present an opportunity, albeit quantifiably narrow, to transcend one’s socioeconomic class?
@@ -245,7 +263,7 @@ function refreshPage(){
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="card3b.gif" style="width:300px;height:440px;">
+      <img src="card3b.gif" style="width:320px;height:460px;">
     </div>
     <div class="flip-card-back">
      Karl Marx wrote that a capitalist mode of production turns the "laborer into a fragment of a man, degrades him to the level of a machine." Digital capabilities take these fragmenting tendencies a step further: the machine player (who is, arguably, a contemporary proxy for the factory laborer) is not merely socially isolated and made into a fragment of a man but is removed from the palpable dimensions of his own body.
@@ -257,7 +275,7 @@ function refreshPage(){
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="card4b.gif" style="width:300px;height:440px;">
+      <img src="card4b.gif" style="width:320px;height:460px;">
     </div>
     <div class="flip-card-back">
       Walter Benjamin has argued that "the countless movements of switching, inserting, pressing" that punctuate modern life and its technologies (intimately connected as they are with the autonomization and standard timing of industrial labor) alter the structure of human experience. "Thus technology has subjected the human sensorium to a complex kind of training," he wrote of traffic signals. In modernity, "the shock experience has become the norm". Perhaps today we have moved from shock to the zone, a state of absorption characterized by flow and continuity. The zone exemplifies traits of "postmodernity" as a number of cultural critics have outlined them: The zone is characterized by play rather than purpose, chance rather than design, absence and immersion rather than presence and perspective, the collapse of time and space (or "time-space compression"), the "waning of affect," the free-floating circulation of credit in market exchange.
@@ -268,7 +286,7 @@ function refreshPage(){
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="card5b.gif" style="width:300px;height:440px;">
+      <img src="card5b.gif" style="width:320px;height:460px;">
     </div>
     <div class="flip-card-back">
       "It is a question of extracting, from time, ever more available moments and, from each moment, ever more useful forces." <br>– Michael Foucault
@@ -292,6 +310,6 @@ The acceleration or intensification of the digital game across bodily, temporal,
     
 
     <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-    <audio id="player" autoplay controls loop><source src="caesar.mp3" type="audio/mp3"></audio></div>
+    <audio id="player" autoplay controls loop><source src="caesa.mp3" type="audio/mp3"></audio></div>
 </body>
 </html>
