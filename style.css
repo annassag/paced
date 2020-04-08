@@ -1,3 +1,4 @@
+  
 
 audio   {
     display: none;
@@ -53,6 +54,11 @@ body {
           box-shadow: none;
 }
 
+/*  #flip-container {
+    margin: auto;
+    padding-left: 3%;
+  }*/
+
   .flip-card {
   width: 22.8%;
   height: 700px;
@@ -72,6 +78,7 @@ body {
 
   .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  max-width: 330px;
   }
 
   .flip-card-front, .flip-card-back {
@@ -263,9 +270,3 @@ body {
     }
 
   }
-
-
-
-
-
-
