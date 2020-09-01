@@ -5,6 +5,7 @@ audio   {
 }
 
 body {
+  overflow: hidden;
 
 }
 
